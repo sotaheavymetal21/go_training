@@ -1,46 +1,26 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
-
-// i5 := 500
-var i5 int = 100
-
-func outer() {
-	var s4 string = "outer"
-	fmt.Println(s4)
-}
+import "fmt"
 
 func main() {
-	fmt.Println("Hello World!")
-	fmt.Println(time.Now())
-	var i int = 100
-	fmt.Println(i)
-
-	var str string = "Hello Go"
-	fmt.Println(str)
-
 	var (
-		i2 int
-		s2 string
+		u8  uint8     = 255
+		i8  int8      = 127
+		f32 float32   = 0.2
+		c64 complex64 = -5 + 12i
 	)
-	i2 = 300
-	s2 = "Go"
-	fmt.Println(i2, s2)
+	fmt.Println(u8, i8, f32, c64)
+	fmt.Printf("type=%T value=%v", u8, u8)
 
-	i = 150
-	fmt.Println(i)
+	x := 0
+	fmt.Println(x)
+	// x = x + 1
+	x++
+	// x = x - 1
+	x--
 
-	// 暗黙的な定義、型推論
-	// 変数名 := 値
-
-	i4 := 400
-	fmt.Println(i4)
-
-	fmt.Println(i5)
-
-	outer()
-
+	fmt.Println(1 << 0) // 0001 0001: 1
+	fmt.Println(1 << 1) // 0001 0010: 2
+	fmt.Println(1 << 2) // 0001 0100: 4
+	fmt.Println(1 << 3) // 0001 1000: 8
 }
